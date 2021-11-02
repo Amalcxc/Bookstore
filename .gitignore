@@ -8,6 +8,11 @@
 # testing
 /coverage
 
+# linter
+.hintrc
+.stylelintrc.json
+.eslintrc.json
+
 # production
 /build
 

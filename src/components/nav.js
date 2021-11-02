@@ -11,7 +11,7 @@ function Nav() {
       <span className='CATEGORIES'>CATEGORIES</span>
       </Link>
       <Link>
-       <span className=''>Sign-In</span> 
+       <span className=''>Sign-In</span>
       </Link>
   </nav></div>;
 }

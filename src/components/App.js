@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './nav'
-import categories from './categories'
-import Books from './books'
+import Nav from './nav';
+import categories from './categories';
+import Books from './books';
 
 function App() {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import AddBook from './addBooks';
 
-
 function books(prop) {
   const {
-    title, chapter, category, completed, Author} = prop
+    title, chapter, category, completed, Author,
+  } = prop;
   return <div className='Lesson-Panel'>
     <AddBook />
     <span>{category}</span>
@@ -23,7 +23,7 @@ function books(prop) {
     <span>{chapter}</span>
     <button className='Update-progress'>Update progress</button>
     </div>
-  </div>
+  </div>;
 }
 
 export default books;
