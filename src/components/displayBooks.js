@@ -4,7 +4,7 @@ import ListOfBooks from './listOfBooks';
 
 const Books = () => (
   <>
-    <div className="books-page">
+    <div className="display-Books">
       <ListOfBooks />
       <h2>ADD NEW BOOK</h2>
       <AddBook />

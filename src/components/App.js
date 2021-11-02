@@ -6,7 +6,6 @@ import Nav from './nav';
 import categories from './categories';
 import Books from './displayBooks';
 
-
 function App() {
   return (
     <Provider store={store}>

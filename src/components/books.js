@@ -32,7 +32,7 @@ const Books = (prop) => {
     <button className='Update-progress'>Update progress</button>
     </div>
   </div>;
-}
+};
 
 Books.propTypes = {
   title: PropTypes.string.isRequired,
