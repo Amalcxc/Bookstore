@@ -1,12 +1,45 @@
-const AddBook = () => (
-  <form>
-    <input type="text" placeholder="Book title" />
-    <input type="text" placeholder="Book Author" />
+import React, { useState } from 'react';
+import {addBook} from '../redux/books/books';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+
+
+const AddBook = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const titleHandler = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const authorHandler = (e) => {
+    setAuthor(e.target.value);
+  };
+  const submitBookToStore = (e) => {
+    e.preventDefault();
+    const newBook = {
+      title: title,
+      category: 'category',
+      author: author,
+      completed: 0,
+      chapter: 0,
+      id: uuidv4(),
+    };
+    e.target.reset();
+    dispatch(addBook(newBook));
+  };
+
+ return (
+  <form onSubmit={submitBookToStore}>
+    <input type="text" onChange={titleHandler} placeholder="Book title" required/>
+    <input type="text" onChange={authorHandler} placeholder="Book Author" required/>
     <select disabled>
       <option value="category">Category</option>
     </select>
-    <button type="button">ADD BOOK</button>
+    <button type="submit">Add Book</button>
   </form>
-);
+ ); 
+};
 
 export default AddBook;
