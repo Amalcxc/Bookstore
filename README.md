@@ -3,9 +3,9 @@
 <img src="screenshot.png">
 
 The Bookstore is MVP website that allows you to:
-      -Display a list of books.
-      -Add a book.
-      -Remove a selected book.
+  - Display a list of books.
+  - Add a book.
+  - Remove a selected book.
 
 
 ## Getting Started
