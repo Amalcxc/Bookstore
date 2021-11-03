@@ -9,9 +9,7 @@ function Nav() {
       <Link to='/categories'>
       <span className='CATEGORIES'>CATEGORIES</span>
       </Link>
-      <Link>
-       <span className=''>Sign-In</span>
-      </Link>
+      <span className=''>Sign-In</span>
   </nav></div>;
 }
 

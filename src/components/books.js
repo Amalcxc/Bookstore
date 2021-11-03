@@ -1,17 +1,26 @@
-import AddBook from './addBooks';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
-function books(prop) {
+const Books = (prop) => {
   const {
-    title, chapter, category, completed, Author,
+    title, chapter, category, id, completed, author,
   } = prop;
+
+  const dispatch = useDispatch();
+
+  const removeHandler = () => {
+    dispatch(removeBook(id));
+  };
+
   return <div className='Lesson-Panel'>
-    <AddBook />
     <span>{category}</span>
     <span>{title}</span>
-    <span>{Author}</span>
+    <span>{author}</span>
     <div className='books-buttons'>
       <button className='Comments'>Comments</button>
-      <button className='Remove'>Remove</button>
+      <button className='Remove' onClick={removeHandler} type="button">Remove</button>
       <button className='Edit'>Edit</button>
     </div>
     <div>
@@ -23,6 +32,15 @@ function books(prop) {
     <button className='Update-progress'>Update progress</button>
     </div>
   </div>;
-}
+};
 
-export default books;
+Books.propTypes = {
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  completed: PropTypes.number.isRequired,
+  chapter: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+};
+
+export default Books;
