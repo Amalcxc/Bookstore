@@ -6,7 +6,7 @@ const Books = () => (
   <>
     <div className="display-Books">
       <ListOfBooks />
-      <h2>ADD NEW BOOK</h2>
+      <h2 className='header'>ADD NEW BOOK</h2>
       <AddBook />
     </div>
   </>

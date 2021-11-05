@@ -31,12 +31,12 @@ const AddBook = () => {
 
   return (
   <form onSubmit={submitBookToStore}>
-    <input type="text" onChange={titleHandler} placeholder="Book title" required/>
-    <input type="text" onChange={authorHandler} placeholder="Book Author" required/>
-    <select disabled>
-      <option value="category">Category</option>
+    <input className='titleInput' type="text" onChange={titleHandler} placeholder="Book title" required/>
+    <input className='titleInput' type="text" onChange={authorHandler} placeholder="Book Author" required/>
+    <select disabled className='categoryOption'>
+      <option value="category" >Category</option>
     </select>
-    <button type="submit">Add Book</button>
+    <button type="submit" className='addButton'>Add Book</button>
   </form>
   );
 };
